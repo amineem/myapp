@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem; min-width:350px;">
+  <img src={{product.imageUrl}} class="card-img-top" alt="..."  style='width:300px !important' >
+    <div class="card-body">
+      <h5 class="card-title" [ngStyle]="{color:productDispo()}">{{product.libelle}}</h5>
+      <div class="row mt-4"> 
+      
+      <button href="#" class="btn btn-primary col" (click)="clickedProduct()" *ngIf="product.dispo">Ajouter au panier</button>
+      <p class="card-text col mt-2" align = "right"><small>{{product.price}} DH</small></p></div>
+    </div>
+</div> 
+   

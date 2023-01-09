@@ -1,0 +1,13 @@
+  <div class="row">
+    <label for="">categories</label>
+    <select class="form-control" (selectedvalue)="filterCategory($event)" >
+     <option  value="all" selected>all </option>
+     <option *ngFor="let item of listCategory" value="{{item}} ">
+       {{item}}
+     </option>
+    </select>
+    <app-product-item *ngFor= "let elt of listProduit" [product]="elt" class="col" (productSelected)="modifyProduct($event)">
+    </app-product-item>
+  </div>
+   
+ 
