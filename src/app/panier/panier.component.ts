@@ -12,7 +12,7 @@ export class PanierComponent implements OnInit {
   constructor(private panierservice: PanierService) {}
 
   ngOnInit(): void {
-    this.panier = this.panierservice.Dtpanier;
+    
   }
 
 }
