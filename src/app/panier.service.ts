@@ -22,4 +22,5 @@ export class PanierService {
     return this.Dtpanier;
   }
 }
+
  
