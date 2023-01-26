@@ -14,13 +14,18 @@ export class PanierService {
     this.Dtpanier.push(Dtpanier);
   }
 
-  rmfromPanier(){
-    
-  }
+  rmfromPanier(){}
 
   getall(){
     return this.Dtpanier;
   }
+
+  viderPanier(){
+    this.Dtpanier=[];
+    return this.Dtpanier;
+  }
+
+  
 }
 
  

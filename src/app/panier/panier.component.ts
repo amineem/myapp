@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DetailPanier } from '../DetailPanier';
 import { PanierService } from '../panier.service';
-
+ 
 @Component({
   selector: 'app-panier',
   templateUrl: './panier.component.html',
@@ -9,10 +9,17 @@ import { PanierService } from '../panier.service';
 })
 export class PanierComponent implements OnInit {
   panier : DetailPanier[]= [];
-  constructor(private panierservice: PanierService) {}
+  constructor(private panierservice: PanierService) {
+   }
 
   ngOnInit(): void {
-    this.panier = this.panierservice.Dtpanier;
-  }
+     
+   }
+
+   getPanier():DetailPanier[]{
+    this.panier= this.panierservice.Dtpanier;
+    console.log(this.panier);
+    return this.panier;
+   }
 
 }

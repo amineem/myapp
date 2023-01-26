@@ -32,7 +32,7 @@ constructor(private productService :ProductService){}
         this.listCategory=cat;
       }
     )
-  }
+  }   
 
   filterCategory(event:any){
       let value = event.target.value

@@ -16,18 +16,23 @@ export class ProductItemComponent implements OnInit {
   @Output() productSelected = new EventEmitter<Product>();
   
   
+  
   clickedProduct() {
     // this.productSelected.emit(this.product);
     this.ps.addtopanier(new DetailPanier(this.product,1));
-  }
+    console.log(this.product);
+    }
   
   productDispo(){
     if(this.product.dispo == true){return "green";}
     else return "red";
   }
+
   constructor(private ps:PanierService) {
 
   }
+
+
 
   ngOnInit(): void {
   }
